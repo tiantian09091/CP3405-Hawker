@@ -37,12 +37,17 @@ export async function ensureAccounts(store) {
   if (!Array.isArray(state.users)) { state.users = []; changed = true; }
   if (!Array.isArray(state.sessions)) { state.sessions = []; changed = true; }
   const email = cleanEmail(process.env.DEMO_HAWKER_EMAIL || "hawker@hawkerforecast.sg");
-  if (!state.users.some((user) => user.email === email)) {
+  const configuredPassword = process.env.DEMO_HAWKER_PASSWORD || "Hawker2026!";
+  const existingHawker = state.users.find((user) => user.email === email);
+  if (!existingHawker) {
     state.users.push({
       id: crypto.randomUUID(), name: "Ahmad Bin Ismail", email,
-      passwordHash: hashPassword(process.env.DEMO_HAWKER_PASSWORD || "Hawker2026!"),
+      passwordHash: hashPassword(configuredPassword),
       role: "hawker", stall: "Laksa & More · Stall 02-45", createdAt: new Date().toISOString(),
     });
+    changed = true;
+  } else if (process.env.DEMO_HAWKER_PASSWORD) {
+    existingHawker.passwordHash = hashPassword(configuredPassword);
     changed = true;
   }
   const active = state.sessions.filter((session) => new Date(session.expiresAt).getTime() > Date.now());
