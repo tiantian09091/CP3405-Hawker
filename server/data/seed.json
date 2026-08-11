@@ -1,0 +1,39 @@
+{
+  "forecast": {
+    "preorders": 78,
+    "walkIns": 112,
+    "safety": 10,
+    "modelFactors": { "weather": "dry", "calendar": "normal", "trend": 4 },
+    "confirmedAt": null,
+    "updatedAt": "2026-08-11T07:45:00.000Z"
+  },
+  "ingredients": [
+    { "name": "Laksa noodles", "per": 120, "unit": "g", "stock": 4.2, "price": 1.5 },
+    { "name": "Prawns (medium)", "per": 45, "unit": "g", "stock": 1.7, "price": 15 },
+    { "name": "Fish cake slices", "per": 40, "unit": "g", "stock": 1.2, "price": 4 },
+    { "name": "Tau pok", "per": 30, "unit": "g", "stock": 0.8, "price": 3 },
+    { "name": "Laksa leaves", "per": 2, "unit": "g", "stock": 0.05, "price": 16 },
+    { "name": "Laksa paste", "per": 60, "unit": "g", "stock": 2.1, "price": 4.5 },
+    { "name": "Coconut milk", "per": 150, "unit": "ml", "stock": 5, "price": 1.5 }
+  ],
+  "preorders": [
+    { "id": "HF-1048", "customer": "Mei Lin", "sets": 3, "time": "11:30 AM", "status": "Confirmed", "marketSetId": 1 },
+    { "id": "HF-1047", "customer": "Daniel Ong", "sets": 2, "time": "12:00 PM", "status": "Confirmed", "marketSetId": 1 },
+    { "id": "HF-1046", "customer": "Nur Aisyah", "sets": 4, "time": "12:15 PM", "status": "Preparing", "marketSetId": 1 },
+    { "id": "HF-1045", "customer": "Rachel Lim", "sets": 1, "time": "1:00 PM", "status": "Confirmed", "marketSetId": 1 }
+  ],
+  "marketSets": [
+    { "id": 1, "stall": "Laksa & More", "centre": "Maxwell Food Centre", "meal": "Classic laksa set", "note": "Laksa, lime drink and tau pok", "price": 8.5, "left": 22 },
+    { "id": 2, "stall": "Ahmad's Chicken Rice", "centre": "Maxwell Food Centre", "meal": "Roasted chicken rice set", "note": "Chicken rice, soup and achar", "price": 7.2, "left": 31 },
+    { "id": 3, "stall": "Kampong Nasi Lemak", "centre": "Tanjong Pagar Plaza", "meal": "Nasi lemak set", "note": "Chicken wing, egg, ikan bilis and sambal", "price": 6.8, "left": 16 }
+  ],
+  "salesHistory": [
+    { "day": "Mon", "portions": 162 },
+    { "day": "Tue", "portions": 185 },
+    { "day": "Wed", "portions": 174 },
+    { "day": "Thu", "portions": 201 },
+    { "day": "Fri", "portions": 219 },
+    { "day": "Sat", "portions": 232 },
+    { "day": "Sun", "portions": 196 }
+  ]
+}

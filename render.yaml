@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: hawker-forecast-platform
+    runtime: node
+    plan: free
+    buildCommand: npm install -g pnpm@11.16.0 && pnpm install --frozen-lockfile && pnpm run build
+    startCommand: pnpm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: "22"
+      - key: DATABASE_URL
+        fromDatabase:
+          name: hawker-forecast-db
+          property: connectionString
+      - key: DEMO_HAWKER_EMAIL
+        value: hawker@hawkerforecast.sg
+      - key: DEMO_HAWKER_PASSWORD
+        sync: false
+
+databases:
+  - name: hawker-forecast-db
+    plan: free
