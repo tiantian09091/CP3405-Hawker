@@ -16,7 +16,7 @@ Open `http://127.0.0.1:4174`.
 Demo hawker account:
 
 - Email: `hawker@hawkerforecast.sg`
-- Password: `Hawker2026!`
+- Password: `zyy123123`
 
 Set `DEMO_HAWKER_EMAIL` and `DEMO_HAWKER_PASSWORD` to different values in Render before publishing.
 
