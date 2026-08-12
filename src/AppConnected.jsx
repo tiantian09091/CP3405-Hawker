@@ -37,7 +37,7 @@ function AuthScreen({ kind, onSubmit, onCancel, busy, error }) {
           <label>Password<input type="password" autoComplete={kind === "register" ? "new-password" : "current-password"} required minLength="8" value={form.password} onChange={(event) => setForm({ ...form, password: event.target.value })} /><small>At least 8 characters</small></label>
           {error && <p className="auth-error" role="alert">{error}</p>}
           <button className="primary wide" disabled={busy}>{busy ? "Please wait…" : kind === "register" ? "Create customer account" : "Sign in"}</button>
-          <p className="auth-note">{kind === "register" ? "Hawker accounts are approved separately and cannot be created here." : "Demo hawker password: Hawker2026!"}</p>
+          <p className="auth-note">{kind === "register" ? "Hawker accounts are approved separately and cannot be created here." : "Demo hawker password: zyy123123"}</p>
         </form>
       </section>
     </main>
